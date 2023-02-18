@@ -4,8 +4,9 @@ interface SectionProps {
 
 function Section({ children }: SectionProps) {
   return (
-    <section className="flex flex-col items-center pb-8 border-b-2 border-blue-700 mb-20">
+    <section className="flex flex-col items-center">
       {children}
+      <div className="divider my-20"></div>
     </section>
   );
 }

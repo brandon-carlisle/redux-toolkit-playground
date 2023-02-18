@@ -12,11 +12,11 @@ const gameSlice = createSlice({
   name: 'score',
   initialState,
   reducers: {
-    setScore(
+    adjustScore(
       state,
-      action: PayloadAction<{ value: number; type: 'INCREMENT' | 'DECREMENT' }>
+      action: PayloadAction<{ value: number; case: 'INCREMENT' | 'DECREMENT' }>
     ) {
-      switch (action.payload.type) {
+      switch (action.payload.case) {
         case 'INCREMENT':
           state.score += action.payload.value;
           break;
@@ -28,5 +28,5 @@ const gameSlice = createSlice({
   },
 });
 
-export const { setScore } = gameSlice.actions;
+export const { adjustScore } = gameSlice.actions;
 export default gameSlice.reducer;
