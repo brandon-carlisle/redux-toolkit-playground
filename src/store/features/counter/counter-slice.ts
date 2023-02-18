@@ -17,3 +17,6 @@ const counterSlice = createSlice({
     },
   },
 });
+
+
+export { increment } = counterSlice.actions
