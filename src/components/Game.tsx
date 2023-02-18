@@ -39,6 +39,21 @@ function Game() {
             Decrement
           </button>
         </form>
+
+        <h3>Question</h3>
+
+        <form className="input-group input-group-vertical">
+          <label htmlFor="question" className="label">
+            What is the name of this stadium?
+          </label>
+
+          <img
+            src="https://images.unsplash.com/photo-1610201417828-29dd1173d62f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+            className="p-4"
+          />
+
+          <input type="text" className="input input-primary" />
+        </form>
       </div>
 
       <p className="uppercase text-2xl">
