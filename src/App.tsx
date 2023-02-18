@@ -1,4 +1,5 @@
 import Counter from './components/Counter';
+import Game from './components/Game';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       </header>
 
       <Counter />
+      <Game />
     </main>
   );
 }

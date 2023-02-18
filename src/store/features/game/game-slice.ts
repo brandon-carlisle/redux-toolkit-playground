@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 interface GameState {
   score: number;
@@ -9,20 +9,24 @@ const initialState: GameState = {
 };
 
 const gameSlice = createSlice({
-  name: 'counter',
+  name: 'score',
   initialState,
   reducers: {
-    changeScore(state, action: PayloadAction<number>) {
-      switch (action.type) {
+    setScore(
+      state,
+      action: PayloadAction<{ value: number; type: 'INCREMENT' | 'DECREMENT' }>
+    ) {
+      switch (action.payload.type) {
         case 'INCREMENT':
-          state.score += action.payload;
+          state.score += action.payload.value;
           break;
         case 'DECREMENT':
-          state.score--;
+          state.score -= action.payload.value;
+          break;
       }
     },
   },
 });
 
-export const { changeScore } = gameSlice.actions;
+export const { setScore } = gameSlice.actions;
 export default gameSlice.reducer;
